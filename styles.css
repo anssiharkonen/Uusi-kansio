@@ -88,3 +88,52 @@ footer p {
 html {
     scroll-behavior: smooth;
 }
+
+/* Responsiivisuus pienille näytöille */
+@media (max-width: 768px) {
+    body {
+        font-size: 90%; /* Pienennetään fonttikokoa pienillä näytöillä */
+        background-position: top; /* Muutetaan taustakuva sopimaan paremmin */
+    }
+
+    header {
+        padding: 15px; /* Lisää tilaa pienille näytöille */
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Muutetaan navigaatio pystysuuntaiseksi */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Lisää väliä pystysuoraan */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Pienennetään fonttikokoa navigaatiossa */
+    }
+
+    main {
+        padding: 15px; /* Pienennetään sisäistä marginaalia */
+    }
+    
+    footer {
+        padding: 15px; /* Lisää tilaa pienemmillä näytöillä */
+    }
+}
+
+/* Erittäin pienille näytöille, kuten puhelimille */
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2rem; /* Pienennetään otsikon kokoa */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Vähennetään fonttikokoa edelleen */
+    }
+
+    main {
+        padding: 10px; /* Lisää luettavuutta pienemmillä näytöillä */
+    }
+}
