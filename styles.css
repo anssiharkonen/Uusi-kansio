@@ -7,6 +7,9 @@ body {
     background-size: cover;
     background-position: center;
     color: #333; /* Change text color to contrast with background */
+    display: flex; /* Flexbox-rakenne */
+    flex-direction: column; /* Elementit pystysuuntaan */
+    min-height: 100vh; /* Sivun korkeus vähintään näkymän korkeus */
 }
 
 header {
@@ -59,11 +62,15 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    background: rgba(255, 255, 255, 0.8); /* Light background with transparency */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 1s ease-out; /* Animation to fade and slide up the main content */
+    animation: fadeInUp 1s ease-out;
+    flex: 1;
+    max-width: 800px; /* Rajoittaa main-leveyttä */
+    margin: 20px auto; /* Keskittää main sisällön */
 }
+
 
 @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(20px); }
@@ -74,7 +81,7 @@ footer {
     background-color: #f1f1f1;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
+    margin-top: auto; /* Työntää footerin alaspäin */
     animation: fadeIn 3s ease-out; /* Fade-in footer */
 }
 
